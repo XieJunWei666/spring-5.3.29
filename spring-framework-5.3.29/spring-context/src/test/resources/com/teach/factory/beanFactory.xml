@@ -1,0 +1,20 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xmlns:aop="http://www.springframework.org/schema/aop"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/aop
+                           https://www.springframework.org/schema/aop/spring-aop.xsd">
+
+	<!-- xsd文件是xml schema s definition，xml文件的模式定义，约束XML内容的格式,
+	 	其外还有一种dtd的约束语言，document type definition，文档类型定义，
+
+	 	一般从http网络上下载文档定义，如果离线环境下或者网络环境差的情况下就无法工作，
+	 	Spring研发团队直接将相应的xsd，dtd文件都放到了对应的jar包中了。
+	 -->
+
+	<bean id="monkey" lazy-init="true" class="com.teach.factory.Monkey" name="monkey-one,monkey-two;monkey-three monkey-four">
+		<property name="name" value="孙悟空"/>
+	</bean>
+</beans>
+

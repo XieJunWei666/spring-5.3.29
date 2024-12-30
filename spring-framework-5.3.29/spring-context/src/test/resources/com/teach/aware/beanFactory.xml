@@ -1,0 +1,14 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xmlns:aop="http://www.springframework.org/schema/aop"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/aop
+                           https://www.springframework.org/schema/aop/spring-aop.xsd">
+
+	<bean id="monkey" lazy-init="true" class="com.teach.aware.Monkey" name="monkey-one,monkey-two;monkey-three monkey-four">
+		<property name="name" value="孙悟空"/>
+		<property name="beanName" value="齐天大圣"/>
+		<property name="beanFactory" value="23498426fgfdgdgfdg"/>
+	</bean>
+</beans>
