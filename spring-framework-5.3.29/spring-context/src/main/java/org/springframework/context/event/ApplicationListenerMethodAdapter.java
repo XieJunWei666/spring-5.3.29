@@ -341,6 +341,7 @@ public class ApplicationListenerMethodAdapter implements GenericApplicationListe
 
 		ReflectionUtils.makeAccessible(this.method);
 		try {
+			//通过放射执行listener的目标方法,bean: listener , args: event
 			return this.method.invoke(bean, args);
 		}
 		catch (IllegalArgumentException ex) {

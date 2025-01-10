@@ -3,9 +3,14 @@ package com.whoiszxl.defaultAnnotation;
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+
+import javax.annotation.Resource;
 import java.util.Arrays;
 
 public class RunTest {
+
+	private Boss boss;
+
 	@Test
 	public void testComponent() {
 		AnnotationConfigApplicationContext context
